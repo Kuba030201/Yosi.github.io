@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Wyrównanie w pionie w środkowej części ekranu */
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative; /* Umożliwia precyzyjne położenie elementów wewnętrznych */
+}
+
+img {
+    border-radius: 50%; /* Okrągły kształt */
+    width: 200px; /* Stała szerokość */
+    height: 200px; /* Stała wysokość */
+    object-fit: cover; /* Zachowanie proporcji */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); /* Dodanie cienia */
+    position: absolute; /* Pozycjonowanie względem body */
+    top: 40%; /* Położenie na środku strony */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Przesunięcie, aby dokładnie wyśrodkować */
+}
+
+.centered-text {
+    font-size: 16px; /* Większy rozmiar tekstu */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: black; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu w wierszu */
+    position: absolute; /* Pozycjonowanie względem body */
+    top: 58%; /* Położenie na środku strony */
+}
+
+.centered-text2 {
+    font-size: 16px; /* Większy rozmiar tekstu */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: black; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu w wierszu */
+    position: absolute; /* Pozycjonowanie względem body */
+    top: 73%; /* Położenie na środku strony */
+}
+
+.centered-text3 {
+    font-size: 16px; /* Większy rozmiar tekstu */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: black; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu w wierszu */
+    position: absolute; /* Pozycjonowanie względem body */
+    top: 69%; /* Położenie na środku strony */
+}
+
+.ticker {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Ustaw szerokość paska */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px; /* Okrągłe rogi na wszystkich stronach */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: colorChange 2s infinite;
+    overflow: hidden; /* Ukrywa zawartość wykraczającą poza okrągłe rogi */
+}
+
+.ticker-text {
+    display: inline-block;
+    font-weight: bold; /* Pogrubiony tekst */
+    color: white;
+    line-height: 1.5;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+.donation-container {
+    position: absolute; /* Umożliwia przesuwanie elementu w górę i w dół */
+    left: 50%; /* Wyrównanie do środka ekranu */
+    transform: translateX(-50%); /* Wyrównanie do środka */
+    top: 598px; /* Odstęp od górnej krawędzi; możesz zmienić tę wartość, aby przesunąć przycisk w górę lub w dół */
+    text-align: center;
+}
+
+.paypal-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004B87; /* Ciemniejszy niebieski kolor tła */
+    color: white;
+    font-size: 16px; /* Mniejszy rozmiar czcionki */
+    font-weight: bold;
+    padding: 8px 16px; /* Mniejsze wypełnienie */
+    border-radius: 20px; /* Okrągłe rogi */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.paypal-button:hover {
+    background-color: #003d6a; /* Jeszcze ciemniejszy niebieski przy najechaniu */
+}
+
+.paypal-logo {
+    width: 20px; /* Mniejsze logo PayPal */
+    height: auto;
+    margin-left: 8px; /* Mniejszy odstęp między tekstem a logo */
+}
